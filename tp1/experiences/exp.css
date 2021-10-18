@@ -1,0 +1,41 @@
+body {
+    background-color: #e9ebee;
+    background-image: url(./expimg.jpg);
+    color: rgb(14, 39, 14);
+}
+table {
+    background-color: #fff;
+}
+a:hover {
+    color: #ff8800;
+}
+tr:hover {
+    background-color: #95e9e0;
+}
+.panel{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+tr:nth-child(even){
+    background-color: #e0f057;
+}
+tr:nth-child(odd){
+    background-color: #eda1fc;
+}	
+.normal:hover {
+    transform: scale(2.5);
+}
+h1{
+    margin-left: 20px;
+	font-size:1cm;
+    transition: 1s;
+}
+h1:hover{
+    font-size: 1.5cm;
+}
+@media only screen and (max-width: 900px) {
+    body {
+        background-color: rgb(235, 79, 79);
+    }
+}
