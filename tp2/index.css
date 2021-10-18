@@ -1,0 +1,36 @@
+body {
+    background-color: #e9ebee;
+	background-image: url(/b-im.jpg);
+}
+table{
+	background-color:white;
+}
+td{
+	padding:5px;
+}
+table{
+	border:1px;
+}
+h1{
+	text-align: center;
+}
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+#error{
+	border: 3px solid #0000;
+	background-color: #ec4196;
+	color:white;
+}
+#resultat{
+	border: 3px solid #0000;
+	background-color:green;
+	color:white;
+}
+.centinf{
+	margin: auto;
+	width: 500px;
+	padding: 5px;
+	border: 3px solid #0000;
+}

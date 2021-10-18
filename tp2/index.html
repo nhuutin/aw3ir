@@ -1,33 +1,61 @@
 <!doctype html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>TP2</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="index.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="index.js"></script>
         <!-- Place favicon.ico in the root directory -->
-
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="js/main.js"></script>-->
     </head>
-    <body>        
-        <h1>tp2</h1>
+    <body>       
+        <h1>Saisie d'une fiche "Personne"</h1>
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+        <table class="center" style="width: 500px">
+            <form action="page1.html" method="post">
+                <tr>
+                    <p>
+                        <td class="titre"><label for="nom" size="">Nom</label></td>
+                        <td><input type="text" id="nom" name="nom" placeholder="" value="" required/></td>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                        <td class="titre"><label for="prenom">Prénom</label></td>
+                        <td><input type="text" id="prenom" name="prenom" placeholder="" value="" required/></td>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                        <td class="titre"><label for="date">Date de naisaance</label></td>
+                        <td><input type="date" id="date" name="date" placeholder="JJ/MM/AAAA" value="" required/></td>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                        <td class="titre"><label for="addr">Addresse</label></td>
+                        <td><input type="text" id="addr" name="addr" placeholder="" value="" required/></td>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                        <td class="titre"><label for="mail">Mail</label></td>
+                        <td><input type="email" id="email" name="mail" placeholder="" value="" required/></td>
+                    </p>
+                </tr>
+                <td></td>
+                <td><button type="button" onclick="validation();">Valider</button></td>
+            </form>
+        </table>
+        <div class="centinf">
+            <div id="error"> </div>
+            <div id="resultat"> </div>
+        </div>
     </body>
 </html>
