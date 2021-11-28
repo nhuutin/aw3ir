@@ -1,33 +1,97 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP3</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lqng="en">
+<head>
+	<title> tp3 </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+  <script src="js/form-jquery-validation.js"></script>
+  <script>
+		$( function() {
+		$("#datepicker").datepicker();
+		} );
+	</script>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+</head>
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>tp3</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+<body>
+<div class="container-fluid">
+  <h1>TP AW - Formulaire v2</h1>
+  <p> Avec Boostrap & jQuery</p> 
+	<form class="form-horizontal">
+  <div class="form-group row">
+      <label for="nom" class="col-sm-2 control-label"><b>Nom</b></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="nom" placeholder="">
+      </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="prenom" class="col-sm-2 control-label"><b>Prenom</b></label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="prenom" placeholder="">
+    </div>
+</div>
+  
+  <div class="form-group row">
+    <label for="date" class="col-sm-2 control-label"><b>Date de naissance</b></label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="datepicker" placeholder="JJ/MM/AAAA">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="addr" class="col-sm-2 control-label"><b>Address</b></label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="addr" placeholder="">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="mail" class="col-sm-2 control-label"><b>Mail</b></label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="mail" placeholder="">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="button" class="col-sm-2 control-label"></label>
+    <div class="col-sm-offset-2 col-sm-10">
+      <button id="vaid" type="button" class="btn btn-primary" data-toggle="" data-target="" data-whatever="">Valider</button>
+	  </div>
+  </div>
+
+</form>
+</div>
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modaltit">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modal1"></p>
+        <a href="" target="_blank"><img src="" alt="" style="width:400" zoom=4></a> 
+        <p id="modal2"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-đefault" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
 </html>
