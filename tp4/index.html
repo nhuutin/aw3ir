@@ -1,33 +1,128 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP4</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> TP4 </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/gps.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+  <script src="js/form-jquery-validation.js"></script>
+  <script>
+		$( function() {
+		$("#datepicker").datepicker();
+		} );
+    
+	</script>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+</head>
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>TP4</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+<body>
+<div class="container-fluid">
+  <h2>Ajouter un contact</h2>
+	<form class="form-horizontal">
+  <div class="form-group row">
+      <label for="nom" class="col-sm-2 control-label" >Nom</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="nom" placeholder="">
+      </div>
+      <div id="nbnom" class="col-sm-3 control-label"></div>
+  </div>
+
+  <div class="form-group row">
+    <label for="prenom" class="col-sm-2 control-label">Prenom</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="prenom" placeholder="">
+    </div>
+    <div id="nbpre" class="col-sm-3 control-label"></div>
+</div>
+  
+  <div class="form-group row">
+    <label for="date" class="col-sm-2 control-label">Date de naissance</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="datepicker" placeholder="jj/mm/aaaa">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="addr" class="col-sm-2 control-label">Address</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="addr" placeholder="">
+    </div>
+    <div class="col-sm-4">
+      <button id="gps" type="button" class="btn btn-primary" data-toggle="" data-target="" data-whatever="">GPS</button>
+	  </div>
+  </div>
+  <div class="form-group row">
+    <label for="map" class="col-sm-2 control-label"></label>
+    <div class="col-sm-offset-2 col-sm-7">
+      <div id="map"></div>
+    </div>
+  </div >
+  <div class="form-group row">
+    <label for="mail" class="col-sm-2 control-label">Mail</label>
+    <div class="col-sm-7">
+      <input type="email" class="form-control" id="mail" placeholder="">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button id="ajou" type="button" class="btn btn-primary" data-toggle="" data-target="" data-whatever="">Ajouter</button>
+	  </div>
+  </div>
+
+</form>
+</div>
+<hr style="width:80%;margin-left: 10px;">
+<div class="container-fluid">
+  <h2>Liste des contacts</h2>
+</div>
+<hr style="width:80%;margin-left: 10px;">
+<div class="container-fluid">
+  <table style="width:80%;">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Date de naissance</th>
+        <th>Address</th>
+        <th>Mail</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modaltit">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modal1"></p>
+        <a href="" target="_blank"><img src="" alt="" style="width:400" zoom=4></a> 
+        <p id="modal2"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-đefault" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
 </html>
