@@ -1,11 +1,12 @@
 $(document).ready(function () {
 	$("button").click(function () {
-		if ($("#nom").val().length < 1 || $("#prenom").val().length < 1 || $("#addr").val().length < 1 || $("#mail").val().length < 1) {
-			$('#modaltit').text('Error');
-			$('#modal1').text('Veuillez remplir tous les champs svp');
+		if ($("#nom").val().length < 5 || $("#prenom").val().length < 5 || validateEmail($("#mail").val())==false || $("#addr").val().length < 5 || validateDate()==false) {
+			$('#modaltit').text('Erreur dans le formulaire');
+			$('#modal1').text('Tous les champs sont obligatoires');
 			$('#myModal').modal("show");
 		}
 		else {
+			$('#datecheck').val($("#datepicker").val());
  			$('#modaltit').text('Bienvenue ' + $("#nom").val());
 			$("#modal1").text('Vous êtes nés le ' + $("#datepicker").val() + ' et vous habitez');
 			$("#myModal .modal-body a").attr("href", "https://maps.google.com/maps?q=" + $("#addr").val() + "&markers=" + $("#addr").val());
@@ -14,8 +15,22 @@ $(document).ready(function () {
 			$('#myModal').modal('show');
  		}
 	});
+	function validateEmail(email) {
+		const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(String(email).toLowerCase());
+	}
  	$("#datepicker").datepicker({
  		dateFormat: "dd/mm/yy",
  		maxDate: 31
  	});
+	 function validateDate() {
+		var selectedDate = $('#datepicker').datepicker('getDate');
+		var now = new Date();
+		now.setHours(0,0,0,0);
+		if (selectedDate <= now) {
+		  return true;
+		} else {
+		  return false;
+		}
+	}
 });
