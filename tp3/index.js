@@ -3,6 +3,9 @@ $(document).ready(function () {
 		if ($("#nom").val().length < 5 || $("#prenom").val().length < 5 || validateEmail($("#mail").val())==false || $("#addr").val().length < 5 || validateDate()==false) {
 			$('#modaltit').text('Erreur dans le formulaire');
 			$('#modal1').text('Tous les champs sont obligatoires');
+			$("#myModal .modal-body a").attr("href","");
+			$("#myModal .modal-body a img").attr("src","");
+			$("#modal2").text(' ');
 			$('#myModal').modal("show");
 		}
 		else {
@@ -15,6 +18,8 @@ $(document).ready(function () {
 			$('#myModal').modal('show');
  		}
 	});
+	//var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+	//myModal.show();
 	function validateEmail(email) {
 		const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		return re.test(String(email).toLowerCase());
